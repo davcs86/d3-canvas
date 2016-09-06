@@ -1,0 +1,33 @@
+{
+    "rules": {
+        "indent": [
+             2,
+             2
+        ],
+        "quotes": [
+            2,
+            "double"
+        ],
+        "linebreak-style": "off",
+        "no-console": 0,
+        "semi": [
+            2,
+            "always"
+        ]
+    },
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "extends": "eslint:recommended",
+    "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "modules": true
+    },
+    "globals": {
+      "require": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    }
+}
