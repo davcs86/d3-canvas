@@ -21,9 +21,7 @@ module.exports = {
         test: /\.js|\.es6?$/,
         exclude: /(node_modules\/(?!constitute)|bower_components)/,
         loaders: ["babel-loader"]
-      },
-      {test: /\.css$/, loader: "style-loader!css-loader"},
-      {test: /\.scss$/, loader: "style-loader!css-loader!sass-loader"}
+      }
     ],
     preLoaders: [
       {
@@ -44,8 +42,6 @@ module.exports = {
       inline: true
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      reserved: ["class"]
-    })
+    new webpack.optimize.UglifyJsPlugin()
   ]
 };

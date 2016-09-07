@@ -6,9 +6,9 @@ A toolbox for displaying and modifying D3js-based diagrams on the web.
 
 ## Stack
 
-- ES2015
+- D3 v4
+- ES6 (ES2015) 
 - Babel
-- Sass
 - Webpack
 
 ## Hacking the project
@@ -34,6 +34,6 @@ If you want to run with webpack-dev-server simply run this command:
 And go to:
 
 ```
-http://localhost:8082/webpack-dev-server/bundle
+http://localhost:8082/webpack-dev-server/
 ```
 
