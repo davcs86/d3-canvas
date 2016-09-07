@@ -3,11 +3,11 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div id="d3Canvas"></div>
+    <div id="d3Canvas" style="width: 800px; height: 400px; position: relative"></div>
     <script type="text/javascript" src="main.js" charset="utf-8"></script>
     <script type="text/javascript">
         window.onload = function (){
-          var diagram = new window['es6-d3-canvas'].default();
+          var diagram = new window['es6-d3-canvas'].default({container: '#d3Canvas'});
         };
     </script>
   </body>

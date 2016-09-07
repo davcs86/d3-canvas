@@ -3,9 +3,10 @@ import EventEmitter from 'events';
 import { Value } from 'constitute';
 import * as d3 from 'd3';
 import { assign } from 'lodash/object';
-import { isNumber } from 'lodash/lang';
+import { isNumber, isString } from 'lodash/lang';
+import $ from 'domtastic';
 
-const Config = new Value({});
+let Config = new Value({});
 
 let ensurePx = (number) => {
   return isNumber(number) ? number + 'px' : number;
@@ -18,9 +19,10 @@ export class Canvas extends Base {
        ['config', config],
        ['eventBus', eventBus],
     ]));
-    this.init();
   }
-  init(){
+  init(config){
+    this._config = config;
+    Config = config;
     this._container = this.createContainer();
     let svg = this._drawingLayer = this._svg = d3.select(this._container).append('svg');
 
@@ -58,11 +60,21 @@ export class Canvas extends Base {
 
     let container = options.container || document.body;
 
+    // support selector
+    if (isString(container)) {
+      container = $(container);
+    }
+
+    // support jquery element
+    // unwrap it if passed
+    if (container.get) {
+      container = container.get(0);
+    }
+
     // create a <div> around the svg element with the respective size
     // this way we can always get the correct container size
     // (this is impossible for <svg> elements at the moment)
     var parent = document.createElement('div');
-    parent.setAttribute('class', 'djs-container');
 
     assign(parent.style, {
       position: 'absolute',
