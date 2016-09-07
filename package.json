@@ -2,7 +2,7 @@
   "name": "es6-d3-canvas",
   "version": "1.1.0",
   "description": "A toolbox for displaying svg-based diagrams with D3.js v4 and ES6",
-  "main": "public/main.js",
+  "main": "public/D3Canvas.js",
   "scripts": {
     "build": "webpack --progress --profile --colors --display-error-details",
     "dev": "webpack-dev-server --progress --profile --colors --inline --hot --port 8082"

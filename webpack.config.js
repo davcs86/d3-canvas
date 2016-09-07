@@ -3,13 +3,13 @@ var path = require("path");
 
 module.exports = {
   entry: [
-    "./lib/D3Canvas"
+    "./lib/Canvas"
   ],
   devtool: process.env.WEBPACK_DEVTOOL || "source-map",
   output: {
     path: path.join(__dirname, "public"),
-    filename: "[name].js",
-    library: "es6-d3-canvas",
+    filename: "D3C.Canvas.js",
+    library: "D3C",
     libraryTarget: "umd"
   },
   resolve: {

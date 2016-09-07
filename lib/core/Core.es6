@@ -1,4 +1,4 @@
-import Base from '../base/Base';
+import Base from './Base';
 import EventEmitter from 'events';
 import { Value } from 'constitute';
 import * as d3 from 'd3';
@@ -12,7 +12,7 @@ let ensurePx = (number) => {
   return isNumber(number) ? number + 'px' : number;
 };
 
-export class Canvas extends Base {
+export default class Core extends Base {
   static constitute() { return [ Config, EventEmitter ]; }
   constructor(config, eventBus) {
     super(new Map([
