@@ -1,11 +1,23 @@
-# d3-webpack-babel
+> CAUTION! This project is in an early development stage.
 
-simple d3 boilerplate to test some simple code
+# es6-d3-canvas
 
-### What's in it?
-Just a simple [app.js](./index.jsx), [webpack.config.js](./webpack.config.js) and [index.html](./public/index.html) file.
+A toolbox for displaying and modifying D3js-based diagrams on the web.
 
-### To run
+## Stack
+
+- ES2015
+- Babel
+- Sass
+- Webpack
+
+## Hacking the project
+
+Setup your development environment
+
+```
+npm install
+```
 
 You can simply run webpack build using this command:
 
@@ -18,8 +30,10 @@ If you want to run with webpack-dev-server simply run this command:
 ```
 > $ npm run dev
 ```
+
 And go to:
-```
-http://localhost:8082/webpack-dev-server/bundle
 
 ```
+http://localhost:8082/webpack-dev-server/bundle
+```
+

@@ -3,13 +3,13 @@ var path = require("path");
 
 module.exports = {
   entry: [
-    "./app/app" // Your appʼs entry point
+    "./lib/D3Canvas"
   ],
   devtool: process.env.WEBPACK_DEVTOOL || "source-map",
   output: {
     path: path.join(__dirname, "public"),
-    filename: "bundle.js",
-    library: "david",
+    filename: "[name].js",
+    library: "es6-d3-canvas",
     libraryTarget: "umd"
   },
   resolve: {
@@ -20,15 +20,15 @@ module.exports = {
       {
         test: /\.js|\.es6?$/,
         exclude: /(node_modules|bower_components)/,
-        loaders: ["babel?presets[]=es2015", "eslint-loader"]
+        loaders: ["babel-loader", "eslint-loader"]
       },
       {test: /\.css$/, loader: "style-loader!css-loader"},
-      {test: /\.less$/, loader: "style-loader!css-loader!less-loader"}
+      {test: /\.scss$/, loader: "style-loader!css-loader!sass-loader"}
     ]
   },
   devServer: {
       contentBase: "./public",
-      noInfo: false, //  --no-info option
+      noInfo: false,
       hot: true,
       inline: true
   },
