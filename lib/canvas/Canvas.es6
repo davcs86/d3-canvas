@@ -74,7 +74,7 @@ export class Canvas extends Base {
     // create a <div> around the svg element with the respective size
     // this way we can always get the correct container size
     // (this is impossible for <svg> elements at the moment)
-    var parent = document.createElement('div');
+    let parent = document.createElement('div');
 
     assign(parent.style, {
       position: 'absolute',

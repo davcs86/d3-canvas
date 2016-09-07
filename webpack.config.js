@@ -19,12 +19,23 @@ module.exports = {
     loaders: [
       {
         test: /\.js|\.es6?$/,
-        exclude: /(node_modules|bower_components)/,
-        loaders: ["babel-loader", "eslint-loader"]
+        exclude: /(node_modules\/(?!constitute)|bower_components)/,
+        loaders: ["babel-loader"]
       },
       {test: /\.css$/, loader: "style-loader!css-loader"},
       {test: /\.scss$/, loader: "style-loader!css-loader!sass-loader"}
+    ],
+    preLoaders: [
+      {
+        test: /\.js|\.es6?$/,
+        exclude: /(node_modules|bower_components)/,
+        loaders: ["eslint-loader"]
+      }
     ]
+  },
+  eslint: {
+    emitError: true,
+    failOnError: true
   },
   devServer: {
       contentBase: "./public",
@@ -33,6 +44,8 @@ module.exports = {
       inline: true
   },
   plugins: [
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      reserved: ["class"]
+    })
   ]
 };
