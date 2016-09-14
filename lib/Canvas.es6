@@ -2,12 +2,18 @@ import { Container } from 'constitute';
 import Core from './core/Core';
 
 export class Canvas {
-  constructor(config = {}) {
+  static constitute () { return [ Container ]; }
+  constructor(container) {
     // create the DI
-    let container = new Container();
     this._ = container.constitute(Core);
+  }
+  init(config = {}) {
     this._.init(config);
+  }
+  $get(dependenceName){
+    return this._.$get(dependenceName);
   }
   destroy() { this._.get('eventBus').emit('d3canvas.destroy'); }
   clear() { this._.get('eventBus').emit('d3canvas.clear'); }
+  resized() { this._.get('eventBus').emit('d3canvas.resize'); }
 }

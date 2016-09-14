@@ -16,8 +16,8 @@ export default class Core extends Base {
   static constitute() { return [ Config, EventEmitter ]; }
   constructor(config, eventBus) {
     super(new Map([
-       ['config', config],
-       ['eventBus', eventBus],
+      ['config', config],
+      ['eventBus', eventBus],
     ]));
   }
   init(config){

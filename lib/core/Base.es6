@@ -6,7 +6,7 @@ export default class Base {
       this[k] = v;
     }
   }
-  static get(dependenceName){
+  $get(dependenceName){
     return this._deps.get(dependenceName);
   }
 }
