@@ -1,5 +1,6 @@
 import { Container } from 'constitute';
 import Core from './core/Core';
+export { Base } from './core/Base';
 
 export class Canvas {
   static constitute () { return [ Container ]; }
