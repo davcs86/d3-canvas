@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/davcs86/es6-d3-canvas#readme",
   "dependencies": {
-    "d3": "^4.2.2",
+    "d3": "^3.5.17",
     "lodash": "^4.15.0"
   },
   "devDependencies": {
