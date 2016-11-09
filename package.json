@@ -31,7 +31,7 @@
   "dependencies": {},
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
-    "d3": "^4.2.1",
+    "d3": "^3.5.17",
     "didi": "^0.1.1",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.12.0",
