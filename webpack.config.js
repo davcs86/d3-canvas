@@ -12,6 +12,9 @@ module.exports = {
     library: "D3C",
     libraryTarget: "umd"
   },
+  externals: {
+    d3: "d3"
+  },
   resolve: {
     extensions: ["", ".js", ".es6"]
   },
