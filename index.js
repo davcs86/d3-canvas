@@ -1,1 +1,1 @@
-module.exports = require('./lib/D3Canvas');
+module.exports = require('./dist/D3P.Canvas');

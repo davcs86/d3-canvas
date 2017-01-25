@@ -1,7 +1,7 @@
 {
   "name": "d3-canvas",
   "description": "A toolbox for displaying svg-based diagrams with D3.js",
-  "main": "dist/d3-canvas.js",
+  "main": "dist/D3P.Canvas.js",
   "authors": [
     "David Castillo"
   ],
