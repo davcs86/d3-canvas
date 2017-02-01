@@ -29,19 +29,20 @@
   },
   "devDependencies": {
     "d3-collection": "^1.0.2",
+    "d3-dispatch": "^1.0.2",
     "d3-force": "^1.0.4",
     "d3-scale": "^1.0.4",
     "d3-selection": "^1.0.3",
     "d3-tip": "^0.7.1",
     "d3-zoom": "^1.1.1",
     "didi": "^0.1.1",
+    "eslint": "^3.13.1",
+    "eslint-loader": "~1.5.0",
     "ids": "^0.2.0",
     "lodash": "^4.14.2",
     "min-dom": "^0.2.0",
     "rollup": "^0.36.4",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "webpack": "^2.1.0-beta.27",
-    "eslint": "^3.13.1",
-    "eslint-loader": "~1.5.0"
+    "webpack": "^2.1.0-beta.27"
   }
 }
