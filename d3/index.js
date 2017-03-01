@@ -1,5 +1,6 @@
 export {
   event,
+  mouse,
   select,
   selection,
   selectAll
