@@ -26,6 +26,7 @@
   "homepage": "https://github.com/davcs86/d3-canvas#readme",
   "dependencies": {},
   "devDependencies": {
+    "classlist-polyfill": "^1.0.3",
     "d3-collection": "^1.0.2",
     "d3-dispatch": "^1.0.2",
     "d3-force": "^1.0.4",
