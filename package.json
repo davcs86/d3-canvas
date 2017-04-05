@@ -6,8 +6,7 @@
   "scripts": {
     "build-d3": "rollup -c",
     "prebuild": "npm run build-d3",
-    "build": "webpack --progress --profile --colors --display-error-details",
-    "postinstall": "npm run build-d3"
+    "build": "webpack --progress --profile --colors --display-error-details"
   },
   "repository": {
     "type": "git",
